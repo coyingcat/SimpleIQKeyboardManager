@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MineCell" id="KGk-i7-Jjw" customClass="MineCell" customModule="我读你默" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="472" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XBH-hj-q2s">
+                        <rect key="frame" x="32" y="23" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="4Uz-CD-5rj"/>
+                            <constraint firstAttribute="height" constant="20" id="dya-4R-6lV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="意见反馈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8i-uO-AEu">
+                        <rect key="frame" x="64" y="23" width="120" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="DJw-FY-rI9"/>
+                            <constraint firstAttribute="height" constant="20" id="K3r-yC-m1Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="16"/>
+                        <color key="textColor" red="0.25098039215686274" green="0.25882352941176467" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uph-vw-WgY">
+                        <rect key="frame" x="32" y="65" width="424" height="1"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="t3R-C2-idI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="l8i-uO-AEu" firstAttribute="leading" secondItem="XBH-hj-q2s" secondAttribute="trailing" constant="12" id="30R-0x-ZB7"/>
+                    <constraint firstItem="Uph-vw-WgY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Bpc-Fo-JOw"/>
+                    <constraint firstItem="XBH-hj-q2s" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TL6-nY-jZ3"/>
+                    <constraint firstAttribute="trailing" secondItem="Uph-vw-WgY" secondAttribute="trailing" constant="16" id="gil-KZ-Qg5"/>
+                    <constraint firstItem="XBH-hj-q2s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="klM-Pj-0uk"/>
+                    <constraint firstItem="l8i-uO-AEu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ngZ-A2-VTt"/>
+                    <constraint firstAttribute="bottom" secondItem="Uph-vw-WgY" secondAttribute="bottom" id="wph-eo-pXq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="line" destination="Uph-vw-WgY" id="Rnq-k2-2wb"/>
+                <outlet property="mineLook" destination="XBH-hj-q2s" id="aMR-Sj-UJt"/>
+                <outlet property="title" destination="l8i-uO-AEu" id="ICs-EZ-1Au"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+        </tableViewCell>
+    </objects>
+</document>
