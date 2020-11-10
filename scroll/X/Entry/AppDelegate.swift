@@ -34,10 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window?.makeKeyAndVisible()
         
-        
-       // window?.rootViewController = UINavigationController(rootViewController: FeedBackController())
-        
-        window?.rootViewController = UINavigationController(rootViewController: UIViewController())
+        window?.rootViewController = UINavigationController(rootViewController: ResultCtrl())
         
     }
     

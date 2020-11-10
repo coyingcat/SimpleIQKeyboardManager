@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		262592BD25572A72002CB58B /* SideHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262592BC25572A72002CB58B /* SideHeader.swift */; };
+		2629D1EC255A2C0800CAB53B /* ResultCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2629D1EB255A2C0800CAB53B /* ResultCtrl.swift */; };
+		2629D1EE255A2DAE00CAB53B /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 2629D1ED255A2DAE00CAB53B /* download.png */; };
 		265431222542AEE400BE4F21 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265431212542AEE400BE4F21 /* StoreKit.framework */; };
 		265431272542B3BC00BE4F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265431252542B3BC00BE4F21 /* AppDelegate.swift */; };
 		266C5DA62540362E00CAD39C /* neg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266C5DA52540362E00CAD39C /* neg.swift */; };
@@ -59,6 +61,8 @@
 		010B3165CD7B60CEBD2BC567 /* Pods-SwiftSocket tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSocket tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSocket tvOS/Pods-SwiftSocket tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		20B8F63C5D8A2BD71813835D /* Pods-SwiftSocket macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSocket macOS.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSocket macOS/Pods-SwiftSocket macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		262592BC25572A72002CB58B /* SideHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideHeader.swift; sourceTree = "<group>"; };
+		2629D1EB255A2C0800CAB53B /* ResultCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCtrl.swift; sourceTree = "<group>"; };
+		2629D1ED255A2DAE00CAB53B /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		265431122542ACC900BE4F21 /* song.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = song.entitlements; sourceTree = "<group>"; };
 		265431212542AEE400BE4F21 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.7.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		265431252542B3BC00BE4F21 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -219,10 +223,12 @@
 		375C482E1DDC4C56008C701D /* X */ = {
 			isa = PBXGroup;
 			children = (
+				2629D1EB255A2C0800CAB53B /* ResultCtrl.swift */,
 				375C48361DDC4C56008C701D /* Assets.xcassets */,
 				265431232542B3BC00BE4F21 /* Entry */,
 				375C483B1DDC4C56008C701D /* Info.plist */,
 				375C48381DDC4C56008C701D /* LaunchScreen.storyboard */,
+				2629D1ED255A2DAE00CAB53B /* download.png */,
 				375C48331DDC4C56008C701D /* Main.storyboard */,
 				26E2D7D9253D91B80059B6C2 /* src */,
 				26E2D7C5253D91B80059B6C2 /* thirdCode */,
@@ -333,6 +339,7 @@
 				375C483A1DDC4C56008C701D /* LaunchScreen.storyboard in Resources */,
 				375C48371DDC4C56008C701D /* Assets.xcassets in Resources */,
 				375C48351DDC4C56008C701D /* Main.storyboard in Resources */,
+				2629D1EE255A2DAE00CAB53B /* download.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +379,7 @@
 				26FEF6052549166600373997 /* DebugHub.swift in Sources */,
 				26E2D7E3253D91B80059B6C2 /* Corp.swift in Sources */,
 				26E2D7EC253D91B80059B6C2 /* ImageViewAdd.swift in Sources */,
+				2629D1EC255A2C0800CAB53B /* ResultCtrl.swift in Sources */,
 				26E2D7EE253D91B80059B6C2 /* UIImageAdd.swift in Sources */,
 				26E2D7E4253D91B80059B6C2 /* NSMutableAttributedStringAdd.swift in Sources */,
 				26E2D7E2253D91B80059B6C2 /* ColorAdd.swift in Sources */,
