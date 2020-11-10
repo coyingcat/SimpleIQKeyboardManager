@@ -9,6 +9,10 @@
 import UIKit
 
 
+import SnapKit
+
+
+
 protocol SideHeaderProxy: class {
     
     func xForce()

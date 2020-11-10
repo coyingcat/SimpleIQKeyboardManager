@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         gotoMain()
         audio()
         
-        
-        keyboard()
    
         return true
     }
@@ -39,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // window?.rootViewController = UINavigationController(rootViewController: FeedBackController())
         
-        window?.rootViewController = UINavigationController(rootViewController: UploadContentC())
+        window?.rootViewController = UINavigationController(rootViewController: UIViewController())
         
     }
     
@@ -61,9 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
-    func keyboard(){
-        _ = IQKeyboardManager.shared
-    }
+
 }
 
