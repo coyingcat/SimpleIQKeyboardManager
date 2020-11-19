@@ -18,6 +18,8 @@
 		266C5C442540188F00CAD39C /* PersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266C5C432540188F00CAD39C /* PersonalData.swift */; };
 		266C5DA62540362E00CAD39C /* neg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266C5DA52540362E00CAD39C /* neg.swift */; };
 		266C5DAD2540373A00CAD39C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 266C5DAC2540373A00CAD39C /* UINavigationController+FDFullscreenPopGesture.m */; };
+		267B200E2566A9B3009A7F5E /* UploadCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B200C2566A9B3009A7F5E /* UploadCtrl.swift */; };
+		267B200F2566A9B3009A7F5E /* UploadCtrl_proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B200D2566A9B3009A7F5E /* UploadCtrl_proxy.swift */; };
 		26D33BF82548366900B7D4B2 /* UploadContentC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D33BF72548366900B7D4B2 /* UploadContentC.swift */; };
 		26E011D1254FAF40008B196E /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E011BD254FAF40008B196E /* IQTextView.swift */; };
 		26E011D2254FAF40008B196E /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E011BF254FAF40008B196E /* IQPreviousNextView.swift */; };
@@ -97,6 +99,8 @@
 		266C5DAB2540373A00CAD39C /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		266C5DAC2540373A00CAD39C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		266C5DAE2540386600CAD39C /* ObjC_Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjC_Bridge.h; sourceTree = "<group>"; };
+		267B200C2566A9B3009A7F5E /* UploadCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadCtrl.swift; sourceTree = "<group>"; };
+		267B200D2566A9B3009A7F5E /* UploadCtrl_proxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadCtrl_proxy.swift; sourceTree = "<group>"; };
 		26D33BF72548366900B7D4B2 /* UploadContentC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadContentC.swift; sourceTree = "<group>"; };
 		26E011BD254FAF40008B196E /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		26E011BF254FAF40008B196E /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
@@ -231,6 +235,15 @@
 			path = ScreenPopGesture;
 			sourceTree = "<group>";
 		};
+		267B200B2566A9B3009A7F5E /* UploadCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				267B200C2566A9B3009A7F5E /* UploadCtrl.swift */,
+				267B200D2566A9B3009A7F5E /* UploadCtrl_proxy.swift */,
+			);
+			path = UploadCtrl;
+			sourceTree = "<group>";
+		};
 		2690B240244F1FE80092492C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +259,7 @@
 		26D33BF62548363C00B7D4B2 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				267B200B2566A9B3009A7F5E /* UploadCtrl */,
 				26E011EE254FE331008B196E /* Model */,
 				26D33BF72548366900B7D4B2 /* UploadContentC.swift */,
 				26280FCC254EB476009206D5 /* UploadContent_proxy.swift */,
@@ -568,10 +582,12 @@
 				26E2D7E5253D91B80059B6C2 /* SortAdd.swift in Sources */,
 				26141F75254C4067003E5591 /* FeedBackController.swift in Sources */,
 				26E2D7E8253D91B80059B6C2 /* FontAdd.swift in Sources */,
+				267B200F2566A9B3009A7F5E /* UploadCtrl_proxy.swift in Sources */,
 				26E011DE254FAF40008B196E /* IQUIViewController+Additions.swift in Sources */,
 				26E2D7DF253D91B80059B6C2 /* RectAdd.swift in Sources */,
 				266C5DA62540362E00CAD39C /* neg.swift in Sources */,
 				26E011E0254FAF40008B196E /* IQUIView+Hierarchy.swift in Sources */,
+				267B200E2566A9B3009A7F5E /* UploadCtrl.swift in Sources */,
 				26E2D7E9253D91B80059B6C2 /* ViewAdd.swift in Sources */,
 				26E2D7E7253D91B80059B6C2 /* ButtonAdd.swift in Sources */,
 				265431272542B3BC00BE4F21 /* AppDelegate.swift in Sources */,

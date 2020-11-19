@@ -39,7 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // window?.rootViewController = UINavigationController(rootViewController: FeedBackController())
         
-        window?.rootViewController = UINavigationController(rootViewController: UploadContentC())
+      ///  window?.rootViewController = UINavigationController(rootViewController: UploadContentC())
+        
+        
+        window?.rootViewController = UINavigationController(rootViewController: UploadCtrl())
         
     }
     
