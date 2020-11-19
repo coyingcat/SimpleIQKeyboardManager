@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+import SnapKit
 
 class UploadCtrl: BaseC {
     
@@ -80,10 +80,30 @@ class UploadCtrl: BaseC {
         return t
     }()
     
+    lazy var chB: UIButton = {
+        let b = UIButton()
+        b.setImage(UIImage(named: "lan_ch_Upload"), for: .normal)
+        b.setImage(UIImage(named: "lan_ch_UploadX"), for: .selected)
+        return b
+    }()
     
- 
+    
+    lazy var enB: UIButton = {
+        let b = UIButton()
+        b.setImage(UIImage(named: "lan_en_Upload"), for: .normal)
+        b.setImage(UIImage(named: "lan_en_UploadX"), for: .selected)
+        return b
+    }()
+    
+    lazy var woXB = -15
+    
+    var xkbFrame = CGRect.zero
     
     var key: Int?
+    
+    var bottomConstraint: ConstraintMakerEditable?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +124,7 @@ class UploadCtrl: BaseC {
         
         h.addSubs([doneTick ])
         
-        contentView.addSubs([titleT, line, inputT ])
+        contentView.addSubs([titleT, line, inputT,  chB, enB])
         layout_h()
         doneTick.snp.makeConstraints { (m) in
             m.size.equalTo(CGSize(width: 33, height: 25))
@@ -132,7 +152,16 @@ class UploadCtrl: BaseC {
         }
         
         
-
+        chB.snp.makeConstraints { (m) in
+            m.size.equalTo(CGSize(width: 80, height: 35))
+            m.leading.equalToSuperview().offset(15)
+            bottomConstraint = m.bottom.equalToSuperview().offset(woXB)
+        }
+        
+        enB.snp.makeConstraints { (m) in
+            m.top.size.equalTo(chB)
+            m.leading.equalTo(chB.snp.trailing).offset(10)
+        }
     }
 
 

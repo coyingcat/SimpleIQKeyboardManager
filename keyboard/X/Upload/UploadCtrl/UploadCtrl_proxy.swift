@@ -31,6 +31,10 @@ extension UploadCtrl: UITextViewDelegate{
         if textView.text == nil || textView.text.count == 0{
             bottomRecover()
         }
+        UIView.animate(withDuration: 0.3) {
+            self.bottomConstraint?.constraint.update(offset: self.woXB)
+            self.contentView.layoutIfNeeded()
+        }
     }
     
  
@@ -69,3 +73,29 @@ extension UploadCtrl: UITextFieldDelegate{
 }
 
 
+
+extension UploadCtrl{
+    @objc internal func keyboardWillShow(_ notification: Notification?) {
+
+
+        if let info = notification?.userInfo {
+            
+
+            let frameEndUserInfoKey = UIResponder.keyboardFrameEndUserInfoKey
+
+            
+            //  Getting UIKeyboardSize.
+            if let kbFrame = info[frameEndUserInfoKey] as? CGRect {
+                
+                xkbFrame = kbFrame
+                print("UIKeyboard Frame: \(xkbFrame)")
+                var bottom = CGFloat(50)
+                
+                UIView.animate(withDuration: 0.3) {
+                    self.bottomConstraint?.constraint.update(offset: self.xkbFrame.size.height.neg + bottom)
+                    self.contentView.layoutIfNeeded()
+                }
+            }
+        }
+    }
+}
