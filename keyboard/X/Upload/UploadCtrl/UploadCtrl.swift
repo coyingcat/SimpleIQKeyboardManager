@@ -95,7 +95,7 @@ class UploadCtrl: BaseC {
         return b
     }()
     
-    lazy var woXB = -15
+    lazy var defaultBottom = -15
     
     var xkbFrame = CGRect.zero
     
@@ -158,7 +158,7 @@ class UploadCtrl: BaseC {
         chB.snp.makeConstraints { (m) in
             m.size.equalTo(CGSize(width: 80, height: 35))
             m.leading.equalToSuperview().offset(15)
-            bottomConstraint = m.bottom.equalToSuperview().offset(woXB)
+            bottomConstraint = m.bottom.equalToSuperview().offset(defaultBottom)
         }
         
         enB.snp.makeConstraints { (m) in
@@ -230,7 +230,7 @@ extension UploadCtrl{
     @objc internal func keyboardWillHide(_ notification: Notification?) {
         
         UIView.animate(withDuration: 0.3) {
-            self.bottomConstraint?.constraint.update(offset: self.woXB)
+            self.bottomConstraint?.constraint.update(offset: self.defaultBottom)
             self.contentView.layoutIfNeeded()
         }
         

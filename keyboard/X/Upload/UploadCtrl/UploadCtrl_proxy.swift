@@ -31,10 +31,6 @@ extension UploadCtrl: UITextViewDelegate{
         if textView.text == nil || textView.text.count == 0{
             bottomRecover()
         }
-        UIView.animate(withDuration: 0.3) {
-            self.bottomConstraint?.constraint.update(offset: self.woXB)
-            self.contentView.layoutIfNeeded()
-        }
     }
     
  
