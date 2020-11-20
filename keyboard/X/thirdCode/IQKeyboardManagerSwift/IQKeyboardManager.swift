@@ -34,9 +34,6 @@ import QuartzCore
 Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more. A generic version of KeyboardManagement. https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html
 */
 
-
-class DDD: UIViewController{}
-
 @objc public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     
     /**
@@ -938,14 +935,14 @@ class DDD: UIViewController{}
                     self.isTextViewContentInsetChanged = true
 
                     var newContentInset = textView.contentInset
-                    newContentInset.bottom = textView.frame.size.height-textViewHeight
-
-                
-                    if #available(iOS 11, *) {
-                        newContentInset.bottom -= textView.safeAreaInsets.bottom
-                    }
+                    let top = CGFloat(15)
+                    let bottom = CGFloat(100)
+       
+                    newContentInset.top = top
+                    newContentInset.bottom = textView.frame.size.height - textViewHeight + bottom
                     
-
+                    newContentInset.bottom -= textView.safeAreaInsets.bottom
+                   
                     if textView.contentInset != newContentInset {
                         self.showLog("\(textFieldView) Old UITextView.contentInset: \(textView.contentInset) New UITextView.contentInset: \(newContentInset)")
 
