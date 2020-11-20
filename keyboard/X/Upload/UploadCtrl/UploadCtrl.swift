@@ -97,7 +97,7 @@ class UploadCtrl: BaseC {
     
     lazy var defaultBottom = -15
     
-    var xkbFrame = CGRect.zero
+    var kBoardFrame = CGRect.zero
     
     var key: Int?
     
@@ -208,8 +208,8 @@ extension UploadCtrl{
             //  Getting UIKeyboardSize.
             if let kbFrame = info[frameEndUserInfoKey] as? CGRect {
                 
-                xkbFrame = kbFrame
-                print("UIKeyboard Frame: \(xkbFrame)")
+                kBoardFrame = kbFrame
+                print("UIKeyboard Frame: \(kBoardFrame)")
                 var bottom = CGFloat(30)
                 
                 if titleT.isFirstResponder{
@@ -217,7 +217,7 @@ extension UploadCtrl{
                 }
                 
                 UIView.animate(withDuration: 0.3) {
-                    self.bottomConstraint?.constraint.update(offset: self.xkbFrame.size.height.neg + bottom)
+                    self.bottomConstraint?.constraint.update(offset: self.kBoardFrame.size.height.neg + bottom)
                     self.contentView.layoutIfNeeded()
                 }
             }
