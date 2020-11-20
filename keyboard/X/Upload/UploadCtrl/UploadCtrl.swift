@@ -109,7 +109,10 @@ class UploadCtrl: BaseC {
         super.viewDidLoad()
 
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         doLayout()
         
@@ -187,4 +190,55 @@ extension UploadCtrl: SideHeaderDelegate{
 }
 
 
+
+
+
+
+extension UploadCtrl{
+    
+    @objc internal func keyboardWillShow(_ notification: Notification?) {
+
+
+        if let info = notification?.userInfo {
+            
+
+            let frameEndUserInfoKey = UIResponder.keyboardFrameEndUserInfoKey
+
+            
+            //  Getting UIKeyboardSize.
+            if let kbFrame = info[frameEndUserInfoKey] as? CGRect {
+                
+                xkbFrame = kbFrame
+                print("UIKeyboard Frame: \(xkbFrame)")
+                var bottom = CGFloat(30)
+                
+                if titleT.isFirstResponder{
+                    bottom = -17
+                }
+                
+                UIView.animate(withDuration: 0.3) {
+                    self.bottomConstraint?.constraint.update(offset: self.xkbFrame.size.height.neg + bottom)
+                    self.contentView.layoutIfNeeded()
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    @objc internal func keyboardWillHide(_ notification: Notification?) {
+        
+        UIView.animate(withDuration: 0.3) {
+            self.bottomConstraint?.constraint.update(offset: self.woXB)
+            self.contentView.layoutIfNeeded()
+        }
+        
+        
+    }
+    
+    
+    
+    
+}
 
