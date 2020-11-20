@@ -147,10 +147,10 @@ class UploadCtrl: BaseC {
             m.top.equalTo(titleT.snp.bottom).offset(8)
             m.height.equalTo(1)
         }
-        
-        
+        let inputOffset: CGFloat = 100
         inputT.snp.makeConstraints { (m) in
-            m.leading.trailing.bottom.equalToSuperview()
+            m.leading.trailing.equalToSuperview()
+            m.bottom.equalToSuperview().offset(inputOffset.neg)
             m.top.equalTo(line.snp.bottom)
         }
         
@@ -210,7 +210,7 @@ extension UploadCtrl{
                 
                 kBoardFrame = kbFrame
                 print("UIKeyboard Frame: \(kBoardFrame)")
-                var bottom = CGFloat(30)
+                var bottom = CGFloat(50)
                 
                 if titleT.isFirstResponder{
                     bottom = -17
